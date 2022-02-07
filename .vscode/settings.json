@@ -1,0 +1,12 @@
+{
+  "css.validate": false,
+  "scss.validate": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true,
+        "source.fixAll.eslint": true,
+  },
+  "eslint.validate": ["ts", "css", "scss", "vue"],
+  // "stylelint.validate": ["ts", "css", "scss", "vue"],
+  // "stylelint.snippet": ["ts", "css", "scss", "vue"],
+}
