@@ -1,23 +1,26 @@
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
-  context: __dirname, // to automatically find tsconfig.json
-  entry: './pages/index.vue',
+  context: __dirname,
+  entry: "./pages/index.vue",
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.vue']
+    extensions: [
+      ".ts", ".tsx", ".js", ".vue",
+    ],
   },
   module: {
     rules: [
       {
         test: /\.vue|ts|tsx?$/,
-        loader: 'ts-loader',
+        loader: "ts-loader",
         exclude: /node_modules/,
         options: {
-          // disable type checker - we will use it in fork plugin
-          transpileOnly: true
-        }
-      }
-    ]
+          transpileOnly: true,
+        },
+      },
+    ],
   },
-  plugins: [new ForkTsCheckerWebpackPlugin()]
-}
+  plugins: [
+    new ForkTsCheckerWebpackPlugin(),
+  ],
+};
